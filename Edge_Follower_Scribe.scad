@@ -8,7 +8,7 @@ module itemModule()
 	{
 		cylinder(d=30, h=60);
 
-		translate([-30/2-1.7,0,0]) rotate([0,90-50,0]) rotate([0,0,30]) tcy([0,0,-10], d=3.3, h=100, $fn=6);
+		translate([-30/2-1.7,0,0]) rotate([0,90-50,0]) rotate([0,0,30]) tcy([0,0,-10], d=4, h=100, $fn=6);
 
 		translate([0,0,20]) rotate([0,-50,0]) 
 		{
@@ -21,7 +21,8 @@ module itemModule()
 
 module clip(d=0)
 {
-	tc([-200, -400-d, -10], 400);
+	// tc([-200, -400-d, -10], 400);
+	rotate([0,90-50,0]) tcu([-200, -200, 30], 400);
 }
 
 if(developmentRender)
